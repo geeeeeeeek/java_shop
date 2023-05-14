@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.springdemo.mapper.ThingWishMapper">
+
+    <select id="getThingWishList" parameterType="map" resultType="java.util.Map">
+        select A.*, B.title, B.cover
+        from b_thing_wish  A
+        join b_thing  B on (A.thing_id=B.id)
+        where A.user_id=#{userId}
+    </select>
+
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.springdemo.mapper.OrderMapper">
+
+    <select id="getList" resultType="com.test.springdemo.entity.Order">
+        select A.*, B.username, C.title
+        from b_order as A
+        join b_user as B on (A.user_id=B.id)
+        join b_thing as C on (A.thing_id=C.id)
+        order by A.order_time desc;
+    </select>
+
+    <select id="getUserOrderList" resultType="com.test.springdemo.entity.Order">
+        select A.*, B.username, C.title, C.cover, C.price
+        from b_order as A
+                 join b_user as B on (A.user_id=B.id)
+                 join b_thing as C on (A.thing_id=C.id)
+        where 2>1
+        <if test="userId != null">
+            and A.user_id=#{userId}
+        </if>
+        <if test="status != null and status != ''">
+            and A.status=#{status}
+        </if>
+        order by A.order_time desc;
+    </select>
+
+</mapper>

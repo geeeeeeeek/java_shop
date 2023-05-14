@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.springdemo.mapper.CommentMapper">
+
+    <select id="getList" resultType="com.test.springdemo.entity.Comment">
+        select A.*, B.username, C.title
+        from b_comment as A
+        join b_user as B on (A.user_id=B.id)
+        join b_thing as C on (A.thing_id=C.id)
+        order by A.comment_time desc;
+    </select>
+
+    <select id="selectThingCommentList" parameterType="map" resultType="com.test.springdemo.entity.Comment">
+        select A.*, B.username, C.title
+        from b_comment as A
+                 join b_user as B on (A.user_id=B.id)
+                 join b_thing as C on (A.thing_id=C.id)
+        <if test="thingId != null">
+            where A.thing_id=#{thingId}
+        </if>
+        <if test="order == 'recent'">
+            order by A.comment_time desc;
+        </if>
+        <if test="order == 'hot'">
+            order by A.like_count desc;
+        </if>
+    </select>
+
+    <select id="selectUserCommentList" parameterType="map" resultType="com.test.springdemo.entity.Comment">
+        select A.*, B.username, C.title, C.cover
+        from b_comment as A
+        join b_user as B on (A.user_id=B.id)
+        join b_thing as C on (A.thing_id=C.id)
+        <if test="userId != null">
+            where A.user_id=#{userId}
+        </if>
+            order by A.comment_time desc;
+    </select>
+
+
+</mapper>
