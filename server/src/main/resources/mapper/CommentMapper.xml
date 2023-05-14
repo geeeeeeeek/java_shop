@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test.springdemo.mapper.CommentMapper">
+<mapper namespace="com.gk.study.mapper.CommentMapper">
 
-    <select id="getList" resultType="com.test.springdemo.entity.Comment">
+    <select id="getList" resultType="com.gk.study.entity.Comment">
         select A.*, B.username, C.title
         from b_comment as A
         join b_user as B on (A.user_id=B.id)
@@ -10,7 +10,7 @@
         order by A.comment_time desc;
     </select>
 
-    <select id="selectThingCommentList" parameterType="map" resultType="com.test.springdemo.entity.Comment">
+    <select id="selectThingCommentList" parameterType="map" resultType="com.gk.study.entity.Comment">
         select A.*, B.username, C.title
         from b_comment as A
                  join b_user as B on (A.user_id=B.id)
@@ -26,7 +26,7 @@
         </if>
     </select>
 
-    <select id="selectUserCommentList" parameterType="map" resultType="com.test.springdemo.entity.Comment">
+    <select id="selectUserCommentList" parameterType="map" resultType="com.gk.study.entity.Comment">
         select A.*, B.username, C.title, C.cover
         from b_comment as A
         join b_user as B on (A.user_id=B.id)

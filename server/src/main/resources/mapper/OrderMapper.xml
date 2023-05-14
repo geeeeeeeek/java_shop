@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test.springdemo.mapper.OrderMapper">
+<mapper namespace="com.gk.study.mapper.OrderMapper">
 
-    <select id="getList" resultType="com.test.springdemo.entity.Order">
+    <select id="getList" resultType="com.gk.study.entity.Order">
         select A.*, B.username, C.title
         from b_order as A
         join b_user as B on (A.user_id=B.id)
@@ -10,7 +10,7 @@
         order by A.order_time desc;
     </select>
 
-    <select id="getUserOrderList" resultType="com.test.springdemo.entity.Order">
+    <select id="getUserOrderList" resultType="com.gk.study.entity.Order">
         select A.*, B.username, C.title, C.cover, C.price
         from b_order as A
                  join b_user as B on (A.user_id=B.id)

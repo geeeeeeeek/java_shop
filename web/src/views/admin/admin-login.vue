@@ -142,7 +142,7 @@ const loginSuccess = () => {
     width: 100%;
     height: calc(100vh - 160px);
     background-color: #2a9a44;
-    background-image: url('../public/images/login.png');
+    background-image: url('../public/images/login.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -2,11 +2,17 @@
 server.port: 9100
 server.servlet.context-path: /api
 
+#BASE_LOCATION: D:\projects\java-shop-raw
+#DB_NAME: shop
+
+BASE_LOCATION: C:\Users\Administrator\Desktop\java-shop
+DB_NAME: java_shop
+
 spring:
   datasource:
     username: root
     password: 4643830
-    url: jdbc:mysql://localhost:3306/shop?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/${DB_NAME}?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -58,7 +64,7 @@ spring:
     multipart:
       max-request-size: 1GB  # 上传文件总的最大值 默认10MB
       max-file-size: 100MB #单个文件最大值 默认1MB
-      location: E:\tudi_workspace\server\upload\tmp # 临时上传目录
+      location: ${BASE_LOCATION}\server\upload\tmp # 临时上传目录
       enabled: true
 
 
@@ -69,11 +75,11 @@ spring:
   web:
     resources:
 #      static-locations: classpath:/static
-      static-locations: file:E:\tudi_workspace\server\upload
+      static-locations: file:${BASE_LOCATION}\server\upload
 
 
 File:
-  uploadPath: "E:\\tudi_workspace\\server\\upload"
+  uploadPath: ${BASE_LOCATION}\server\upload
 
 mybatis:
   configuration:

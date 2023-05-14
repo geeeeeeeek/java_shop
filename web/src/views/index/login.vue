@@ -90,7 +90,7 @@ div {
 
 .container {
   //background-color: #f1f1f1;
-  background-image: url('../public/images/login.png');
+  background-image: url('../public/images/login.jpg');
   background-size: cover;
   object-fit: cover;
   height: 100%;

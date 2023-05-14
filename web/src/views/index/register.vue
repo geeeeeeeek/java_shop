@@ -103,7 +103,7 @@ div {
 .container {
   max-width: 100%;
   //background: #142131;
-  background-image: url('../public/images/login.png');
+  background-image: url('../public/images/login.jpg');
   height: 100vh;
   overflow: hidden;
   display:flex;
