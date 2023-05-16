@@ -95,10 +95,9 @@
 
 <script setup lang="ts">
 import {ref} from 'vue';
-import * as echarts from 'echarts'
+
 import { InteractionOutlined, StarFilled, StarTwoTone } from '@ant-design/icons-vue';
 import {listApi} from '/@/api/overview'
-
 
 let showSpin = ref(true)
 

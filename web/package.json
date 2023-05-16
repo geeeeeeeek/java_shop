@@ -17,8 +17,7 @@
     "pinia-plugin-persistedstate": "^3.0.2",
     "qs": "^6.11.0",
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6",
-    "echarts": "^4.9.0"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@types/qs": "^6.9.7",
