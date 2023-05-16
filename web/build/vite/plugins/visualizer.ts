@@ -4,10 +4,10 @@ import { ANALYSIS } from '../../constant';
 export function ConfigVisualizerConfig() {
   if (ANALYSIS) {
     return visualizer({
-      filename: './node_modules/.cache/visualizer/stats.html',
+      filename: 'dist/report.html',
       open: true,
       gzipSize: true,
-      brotliSize: true,
+      emitFile: false
     });
   }
   return [];
