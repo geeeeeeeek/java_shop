@@ -1,0 +1,1 @@
+import{G as a}from"./index-f6b5f6b4.js";const i=async s=>a({url:"/api/opLog/loginLogList",params:s,data:{},headers:{}}),t=async s=>a({url:"/api/opLog/list",params:s,data:{},headers:{}}),r=async s=>a({url:"/api/errorLog/list",params:s,data:{},headers:{}});export{t as a,r as b,i as l};

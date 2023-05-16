@@ -874,10 +874,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-ant-design-vue@^3.2.15:
-  version "3.2.15"
-  resolved "https://registry.npmmirror.com/ant-design-vue/-/ant-design-vue-3.2.15.tgz"
-  integrity sha512-sJfE7LWimSdAPe4dzNyQBrmVMnOTNQTkG9oOyr+7W8qIYrX8sYWyC68Nn1uum4KBJUSZUa/BU6dohvTG0urBhA==
+ant-design-vue@^3.2.20:
+  version "3.2.20"
+  resolved "https://registry.npmmirror.com/ant-design-vue/-/ant-design-vue-3.2.20.tgz#552f5f08e2acbcc10bd4089145d4cc2b15d4cfec"
+  integrity sha512-YWpMfGaGoRastIXEYfCoJiaRiDHk4chqtYhlKQM5GqPt6NfvrM1Vg2e60yHtjxlZjed91wCMm0rAmyUr7Hwzdg==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@ant-design/icons-vue" "^6.1.0"
@@ -1282,13 +1282,6 @@ domutils@^3.0.1:
     dom-serializer "^2.0.0"
     domelementtype "^2.3.0"
     domhandler "^5.0.1"
-
-echarts@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.npmmirror.com/echarts/-/echarts-4.9.0.tgz"
-  integrity sha512-+ugizgtJ+KmsJyyDPxaw2Br5FqzuBnyOWwcxPKO6y0gc5caYcfnEUIlNStx02necw8jmKmTafmpHhGo4XDtEIA==
-  dependencies:
-    zrender "4.3.2"
 
 electron-to-chromium@^1.4.284:
   version "1.4.284"
@@ -3319,8 +3312,3 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
-
-zrender@4.3.2:
-  version "4.3.2"
-  resolved "https://registry.npmmirror.com/zrender/-/zrender-4.3.2.tgz"
-  integrity sha512-bIusJLS8c4DkIcdiK+s13HiQ/zjQQVgpNohtd8d94Y2DnJqgM1yjh/jpDb8DoL6hd7r8Awagw8e3qK/oLaWr3g==

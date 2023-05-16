@@ -15,6 +15,10 @@
 2. eslintrc.js 代码规范化提示
 3. vite.config.js vite 开发服务器配置
 
-#### 全局变量
+#### 常见问题
 
+##### 变量
 https://blog.csdn.net/qq_41636947/article/details/117907448
+
+##### antd的css引入方式
+在index.html里面引入的cdn
