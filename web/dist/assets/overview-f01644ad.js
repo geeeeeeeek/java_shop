@@ -1,1 +1,0 @@
-import{G as a}from"./index-f6b5f6b4.js";const o=async s=>a({url:"/api/overview/count",params:s,data:{},headers:{}}),r=async s=>a({url:"/api/overview/sysInfo",params:s,data:{},headers:{}});export{o as l,r as s};

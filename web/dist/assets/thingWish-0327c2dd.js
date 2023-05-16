@@ -1,1 +1,0 @@
-import{G as a,H as t}from"./index-f6b5f6b4.js";const r=async s=>t({url:"/api/thingWish/wish",params:{},data:s,headers:{"Content-Type":"multipart/form-data;charset=utf-8"}}),h=async s=>t({url:"/api/thingWish/unWish",params:s,headers:{"Content-Type":"multipart/form-data;charset=utf-8"}}),e=async s=>a({url:"/api/thingWish/getUserWishList",params:s});export{h as a,e as u,r as w};
