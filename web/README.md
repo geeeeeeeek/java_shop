@@ -26,3 +26,4 @@ https://blog.csdn.net/qq_41636947/article/details/117907448
 ##### cdn
 https://cdn.jsdelivr.net/npm/ant-design-vue@3.2.20/dist/
 
+#### public文件夹内容在build后会自动打到dist中

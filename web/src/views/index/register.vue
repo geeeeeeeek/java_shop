@@ -103,7 +103,9 @@ div {
 .container {
   max-width: 100%;
   //background: #142131;
-  background-image: url('../public/images/login.jpg');
+  background-image: url('../images/admin-login-bg.jpg');
+  background-size: cover;
+  object-fit: cover;
   height: 100vh;
   overflow: hidden;
   display:flex;
@@ -116,10 +118,9 @@ div {
   width: 400px;
   height: 464px;
   background: #fff;
-  -webkit-box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
-  box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+  -webkit-box-shadow: 2px 2px 6px #aaa;
+  box-shadow: 2px 2px 6px #aaa;
   border-radius: 4px;
-  //margin: -232px auto 0;
 }
 
 .tel-regist-page {

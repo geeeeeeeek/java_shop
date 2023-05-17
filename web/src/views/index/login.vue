@@ -90,7 +90,7 @@ div {
 
 .container {
   //background-color: #f1f1f1;
-  background-image: url('../public/images/login.jpg');
+  background-image: url('../images/admin-login-bg.jpg');
   background-size: cover;
   object-fit: cover;
   height: 100%;
@@ -132,6 +132,8 @@ div {
   height: 464px;
   background: #fff;
   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 6px #aaa;
+  box-shadow: 2px 2px 6px #aaa;
 }
 
 .login-tab {

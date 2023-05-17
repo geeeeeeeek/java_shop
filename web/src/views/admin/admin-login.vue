@@ -141,8 +141,7 @@ const loginSuccess = () => {
   .main-container {
     width: 100%;
     height: calc(100vh - 160px);
-    background-color: #2a9a44;
-    background-image: url('../public/images/login.jpg');
+    background-image: url('../images/admin-login-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,6 +154,8 @@ const loginSuccess = () => {
       transform: translate(0, -50%);
       border-radius: 8px;
       overflow: hidden;
+      -webkit-box-shadow: 2px 2px 6px #aaa;
+      box-shadow: 2px 2px 6px #aaa;
 
       .main_right {
         background: #ffffff;
