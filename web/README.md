@@ -22,3 +22,7 @@ https://blog.csdn.net/qq_41636947/article/details/117907448
 
 ##### antd的css引入方式
 在index.html里面引入的cdn
+
+##### cdn
+https://cdn.jsdelivr.net/npm/ant-design-vue@3.2.20/dist/
+
