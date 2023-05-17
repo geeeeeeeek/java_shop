@@ -11,17 +11,15 @@
 ### 后端部署流程
 
 1. 配置端口 位于application.yml
-2. 配置数据库 位于application.yml
-3. 配置location目录 位于application.yml
-4. 配置静态目录 位于application.yml
-5. 配置uploadPath 位于application.yml
-6. 修改logback-spring.xml下的LOG_HOME的value值
-7. maven clean -> maven package
-8. 将jar包复制到服务器
-9. 将upload文件夹复制到服务器
-10. 运行启动jar包命令
+2. 配置DB_NAME 位于application.yml
+3. 配置BASE_LOCATION 位于application.yml
+4. 修改logback-spring.xml下的LOG_HOME的value值
+5. maven clean -> maven package
+6. 将jar包复制到服务器
+7. 将upload文件夹复制到服务器
+8. 运行启动jar包命令
 
-### 运行命令（或双击start.sh）
+### 运行jar命令（或双击start.sh）
 
 title xxxx
 java -jar -Xms64m -Xmx128m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=64m xxxxx.jar
