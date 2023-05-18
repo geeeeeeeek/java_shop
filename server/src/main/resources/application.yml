@@ -2,11 +2,11 @@
 server.port: 9100
 server.servlet.context-path: /api
 
-#BASE_LOCATION: D:\projects\java-shop-raw
-#DB_NAME: shop
+BASE_LOCATION: D:\projects\java_shop
+DB_NAME: shop
 
-BASE_LOCATION: C:\Users\Administrator\Desktop\java-shop
-DB_NAME: java_shop
+#BASE_LOCATION: C:\Users\Administrator\Desktop\java-shop
+#DB_NAME: java_shop
 
 spring:
   datasource:

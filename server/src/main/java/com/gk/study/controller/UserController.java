@@ -168,6 +168,23 @@ public class UserController {
         return new APIResponse(ResponeCode.SUCCESS, "更新成功");
     }
 
+
+    @RequestMapping(value = "/updateUserInfo", method = RequestMethod.POST)
+    @Transactional
+    public APIResponse updateUserInfo(User user) throws IOException {
+        // username和password不能改，故置空
+        user.setUsername(null);
+        user.setPassword(null);
+        user.setRole(String.valueOf(User.NormalUser));
+        String avatar = saveAvatar(user);
+        if(!StringUtils.isEmpty(avatar)) {
+            user.avatar = avatar;
+        }
+        userService.updateUser(user);
+        System.out.println(user);
+        return new APIResponse(ResponeCode.SUCCESS, "更新成功");
+    }
+
     @RequestMapping(value = "/updatePwd", method = RequestMethod.POST)
     @Transactional
     public APIResponse updatePwd(String userId, String password, String newPassword) throws IOException {

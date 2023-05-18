@@ -47,7 +47,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     }
 
     @Override
-    public List<Comment> getUserCommentList(String thingId) {
-        return mapper.selectUserCommentList(thingId);
+    public List<Comment> getUserCommentList(String userId) {
+        return mapper.selectUserCommentList(userId);
     }
 }

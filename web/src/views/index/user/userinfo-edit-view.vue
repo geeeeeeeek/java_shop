@@ -57,7 +57,7 @@
 
 <script setup>
 import {message} from "ant-design-vue";
-import {detailApi, updateApi} from '/@/api/user'
+import {detailApi, updateUserInfoApi} from '/@/api/user'
 import {BASE_URL} from "/@/store/constants";
 import {useUserStore} from "/@/store";
 import AvatarIcon from '/@/assets/images/avatar.jpg'
@@ -123,7 +123,7 @@ const submit =()=> {
   if (tData.form.description) {
     formData.append('description', tData.form.description)
   }
-  updateApi(formData).then(res => {
+  updateUserInfoApi(formData).then(res => {
     message.success('保存成功')
     getUserInfo()
   }).catch(err => {

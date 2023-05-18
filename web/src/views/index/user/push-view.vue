@@ -23,7 +23,7 @@
 
 <script setup>
 import {message} from "ant-design-vue";
-import {detailApi, updateApi} from '/@/api/user'
+import {detailApi, updateUserInfoApi} from '/@/api/user'
 import {useUserStore} from "/@/store";
 
 const router = useRouter();
@@ -67,7 +67,7 @@ const handleSave =()=> {
     formData.append('pushEmail', pushEmail.value)
   }
   formData.append('pushSwitch', pushSwitch.value? '1':'0')
-  updateApi(formData).then(res => {
+  updateUserInfoApi(formData).then(res => {
     getUserInfo()
     message.success('保存成功')
   }).catch(err => {

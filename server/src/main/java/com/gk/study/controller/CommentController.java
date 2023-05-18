@@ -42,8 +42,8 @@ public class CommentController {
 
     // 用户的所有评论
     @RequestMapping(value = "/listUserComments", method = RequestMethod.GET)
-    public APIResponse listUserComments(String thingId, String order){
-        List<Comment> list =  service.getUserCommentList(thingId);
+    public APIResponse listUserComments(String userId){
+        List<Comment> list =  service.getUserCommentList(userId);
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }
 
