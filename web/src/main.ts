@@ -4,8 +4,8 @@ import router from './router';
 import piniaStore from './store';
 
 import bootstrap from './core/bootstrap';
-import '/@/styles/index.less';
 import '/@/styles/reset.less';
+import '/@/styles/index.less';
 import Antd from 'ant-design-vue';
 
 const app = createApp(App);

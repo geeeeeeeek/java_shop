@@ -85,7 +85,7 @@
 import {message} from "ant-design-vue";
 import {getFormatTime} from '/@/utils/'
 import {userOrderListApi} from '/@/api/order'
-import {cancelApi} from '/@/api/order'
+import {cancelUserOrderApi} from '/@/api/order'
 import {BASE_URL} from "/@/store/constants";
 import {useUserStore} from "/@/store";
 
@@ -136,7 +136,7 @@ const handleDetail =(thingId) =>{
   window.open(text.href, '_blank')
 }
 const handleCancel =(item)=> {
-  cancelApi({
+  cancelUserOrderApi({
     id: item.id
   }).then(res => {
     message.success('取消成功')

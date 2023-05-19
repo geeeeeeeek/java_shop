@@ -66,9 +66,21 @@ public class OrderController {
         return new APIResponse(ResponeCode.SUCCESS, "更新成功");
     }
 
+    @Access(level = AccessLevel.ADMIN)
     @RequestMapping(value = "/cancelOrder", method = RequestMethod.POST)
     @Transactional
     public APIResponse cancelOrder(Long id) throws IOException {
+        Order order = new Order();
+        order.setId(id);
+        order.setStatus("7"); // 7=取消
+        service.updateOrder(order);
+        return new APIResponse(ResponeCode.SUCCESS, "取消成功");
+    }
+
+    @Access(level = AccessLevel.LOGIN)
+    @RequestMapping(value = "/cancelUserOrder", method = RequestMethod.POST)
+    @Transactional
+    public APIResponse cancelUserOrder(Long id) throws IOException {
         Order order = new Order();
         order.setId(id);
         order.setStatus("7"); // 7=取消

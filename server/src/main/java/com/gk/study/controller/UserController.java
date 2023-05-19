@@ -169,34 +169,45 @@ public class UserController {
     }
 
 
+    @Access(level = AccessLevel.LOGIN)
     @RequestMapping(value = "/updateUserInfo", method = RequestMethod.POST)
     @Transactional
     public APIResponse updateUserInfo(User user) throws IOException {
-        // username和password不能改，故置空
-        user.setUsername(null);
-        user.setPassword(null);
-        user.setRole(String.valueOf(User.NormalUser));
-        String avatar = saveAvatar(user);
-        if(!StringUtils.isEmpty(avatar)) {
-            user.avatar = avatar;
+        User tmpUser =  userService.getUserDetail(user.getId());
+        if(tmpUser.getRole().equals(String.valueOf(User.NormalUser))){
+            // username和password不能改，故置空
+            user.setUsername(null);
+            user.setPassword(null);
+            user.setRole(String.valueOf(User.NormalUser));
+            String avatar = saveAvatar(user);
+            if(!StringUtils.isEmpty(avatar)) {
+                user.avatar = avatar;
+            }
+            userService.updateUser(user);
+            return new APIResponse(ResponeCode.SUCCESS, "更新成功");
+        }else {
+            return new APIResponse(ResponeCode.FAIL, "非法操作");
         }
-        userService.updateUser(user);
-        System.out.println(user);
-        return new APIResponse(ResponeCode.SUCCESS, "更新成功");
     }
 
+    @Access(level = AccessLevel.LOGIN)
     @RequestMapping(value = "/updatePwd", method = RequestMethod.POST)
     @Transactional
     public APIResponse updatePwd(String userId, String password, String newPassword) throws IOException {
         User user =  userService.getUserDetail(userId);
-        String md5Pwd = DigestUtils.md5DigestAsHex((password + salt).getBytes());
-        if(user.getPassword().equals(md5Pwd)){
-            user.setPassword(DigestUtils.md5DigestAsHex((newPassword + salt).getBytes()));
-            userService.updateUser(user);
+        if(user.getRole().equals(String.valueOf(User.NormalUser))) {
+            String md5Pwd = DigestUtils.md5DigestAsHex((password + salt).getBytes());
+            if(user.getPassword().equals(md5Pwd)){
+                user.setPassword(DigestUtils.md5DigestAsHex((newPassword + salt).getBytes()));
+                userService.updateUser(user);
+            }else {
+                return new APIResponse(ResponeCode.FAIL, "原密码错误");
+            }
+            return new APIResponse(ResponeCode.SUCCESS, "更新成功");
         }else {
-            return new APIResponse(ResponeCode.FAIL, "原密码错误");
+            return new APIResponse(ResponeCode.FAIL, "非法操作");
         }
-        return new APIResponse(ResponeCode.SUCCESS, "更新成功");
+
     }
 
     public String saveAvatar(User user) throws IOException {

@@ -82,6 +82,20 @@ public class AccessInterceptor extends HandlerInterceptorAdapter {
             }
         }
 
+        // 用户
+        if(access.level().getCode() == AccessLevel.LOGIN.getCode()) {
+            String token = request.getHeader("TOKEN");
+            logger.info("token==>" + token);
+            User user = userService.getUserByToken(token);
+            if(user != null && user.getRole().equals(String.valueOf(User.NormalUser))){
+                return true;
+            }else {
+                APIResponse apiResponse = new APIResponse(ResponeCode.FAIL, "未登录");
+                writeResponse(response, apiResponse);
+                return false;
+            }
+        }
+
         return true;
     }
 

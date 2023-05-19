@@ -62,8 +62,8 @@ spring:
 
   servlet:
     multipart:
-      max-request-size: 1GB  # 上传文件总的最大值 默认10MB
-      max-file-size: 100MB #单个文件最大值 默认1MB
+      max-request-size: 10MB  # 上传文件总的最大值 默认10MB
+      max-file-size: 1MB #单个文件最大值 默认1MB
       location: ${BASE_LOCATION}\server\upload\tmp # 临时上传目录
       enabled: true
 

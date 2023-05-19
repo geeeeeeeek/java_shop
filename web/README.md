@@ -5,8 +5,7 @@
 
 1. 修改constants.ts中的BASE_URL
 2. vite build
-3. 将public文件夹复制到dist
-4. 将dist部署到nginx
+3. 将dist部署到nginx
 
 
 #### 配置解释
@@ -25,5 +24,6 @@ https://blog.csdn.net/qq_41636947/article/details/117907448
 
 ##### cdn
 https://cdn.jsdelivr.net/npm/ant-design-vue@3.2.20/dist/
+https://cdn.staticfile.org/ant-design-vue/3.2.20/antd.min.css
 
 #### public文件夹内容在build后会自动打到dist中

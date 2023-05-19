@@ -6,6 +6,7 @@ enum URL {
     update = '/api/order/update',
     delete = '/api/order/delete',
     cancel = '/api/order/cancelOrder',
+    cancelUserOrder = '/api/order/cancelUserOrder',
     userOrderList = '/api/order/userOrderList',
 }
 
@@ -34,4 +35,7 @@ const deleteApi = async (params: any) =>
 const cancelApi = async (params: any) =>
     post<any>({url: URL.cancel, params: params, headers: {}});
 
-export {listApi, userOrderListApi, createApi, updateApi, deleteApi, cancelApi};
+const cancelUserOrderApi = async (params: any) =>
+    post<any>({url: URL.cancelUserOrder, params: params, headers: {}});
+
+export {listApi, userOrderListApi, createApi, updateApi, deleteApi, cancelApi, cancelUserOrderApi};

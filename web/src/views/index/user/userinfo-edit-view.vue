@@ -7,7 +7,8 @@
         <div class="item flex-view">
           <div class="label">头像</div>
           <div class="right-box avatar-box flex-view">
-            <img v-if="tData.form !== null" :src="tData.form.avatar" class="avatar">
+            <img v-if="tData.form && tData.form.avatar" :src="tData.form.avatar" class="avatar">
+            <img v-else :src="AvatarIcon" class="avatar">
             <div class="change-tips flex-view">
                 <a-upload
                   name="file"

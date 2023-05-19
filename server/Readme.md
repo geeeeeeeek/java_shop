@@ -17,7 +17,8 @@
 5. maven clean -> maven package
 6. 将jar包复制到服务器
 7. 将upload文件夹复制到服务器
-8. 运行启动jar包命令
+8. 迁移mysql数据库
+9. 运行启动jar包命令
 
 ### 运行jar命令（或双击start.sh）
 
