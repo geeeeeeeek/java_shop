@@ -1,4 +1,5 @@
 # Document of this project
+> 学习过程中，遇到问题可以咨询作者：lengqin1024（微信）
 
 ### 功能
 
