@@ -37,36 +37,41 @@
 
 #### 后端运行步骤
 
-(1) 下载代码后，使用IntelliJ IDEA打开server目录
+1. 下载JDK 1.8，并配置环境变量
 
-(2) 配置application.yml文件，配置数据库和upload根目录
+2. 下载本代码后，使用IntelliJ IDEA打开server目录
 
-(3) 安装mysql 5.7数据库，并创建数据库，命名为java_shop，创建SQL如下：
+3. 配置server目录中的application.yml文件，配置BASE_LOCATION、DB_NAME、数据库账号密码
+
+4. 安装mysql 5.7数据库，并创建数据库，创建SQL如下：
 ```
 CREATE DATABASE IF NOT EXISTS java_shop DEFAULT CHARSET utf8 COLLATE utf8_general_ci
 ```
-(4) 恢复sql数据。在mysql下依次执行如下命令：
+5. 恢复sql数据。在mysql下依次执行如下命令：
 
 ```
 mysql> use java_shop;
-mysql> source D:/xxx/xxx/shop.sql;
+mysql> source D:/xxx/xxx/xxx.sql;
 ```
 
-(5) 启动后端服务：点击IDEA顶部run按钮
+6. 启动后端服务：点击IDEA顶部run按钮
 
 
 #### 前端运行步骤
 
-(1) 安装node 16.14
+1. 安装node 16.14
 
-(2) cmd进入web目录下，安装依赖，执行:
+2. 修改web/src/store下的constansts.ts文件中的BASE_URL，改成你自己后端的地址
+
+3. cmd命令进入web目录下，安装依赖，执行:
 ```
 npm install 
 ```
-(3) 运行项目
+4. 运行项目
 ```
 npm run dev
 ```
+5. 在浏览器输入: http://localhost:3000 即可预览
 
 
 ### 界面预览
