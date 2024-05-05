@@ -86,6 +86,10 @@ npm run dev
 ![](https://raw.githubusercontent.com/geeeeeeeek/shop/master/server/upload/img/b.png)
 
 
+
+### 参考论文
+[点击进入](doc/java_shop.docx)
+
  
 
 ### 付费咨询
