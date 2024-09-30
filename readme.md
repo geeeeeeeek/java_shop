@@ -90,6 +90,10 @@ npm run dev
 ### 参考论文
 [点击进入](doc/java_shop.docx)
 
+
+### 视频讲解
+
+[点击进入](https://www.youtube.com/watch?v=vVKU4VjmaGE)
  
 
 ### 付费咨询
