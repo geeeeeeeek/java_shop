@@ -27,6 +27,10 @@
 
 大学生、系统设计人员、课程作业
 
+### 视频讲解
+
+https://www.youtube.com/watch?v=vVKU4VjmaGE&t=4s
+
 
 ### 代码结构
 
