@@ -29,7 +29,7 @@
 
 ### 视频讲解
 
-https://www.youtube.com/watch?v=vVKU4VjmaGE&t=4s
+https://youtu.be/vVKU4VjmaGE?si=lJBmKmbbyTFs_KDw
 
 
 ### 代码结构
