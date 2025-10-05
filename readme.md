@@ -78,16 +78,7 @@ npm run dev
 5. 在浏览器输入: http://localhost:3000 即可预览
 
 
-### 界面预览
-
-首页
-
-![](https://raw.githubusercontent.com/geeeeeeeek/shop/master/server/upload/img/a.png)
-
-
-后台页面
-
-![](https://raw.githubusercontent.com/geeeeeeeek/shop/master/server/upload/img/b.png)
+ 
 
 
 
@@ -97,7 +88,7 @@ npm run dev
 
 ### 视频讲解
 
-[点击进入](https://www.youtube.com/watch?v=vVKU4VjmaGE)
+https://www.youtube.com/watch?v=S9IyqpCvqr8
  
 
 ### 付费咨询
